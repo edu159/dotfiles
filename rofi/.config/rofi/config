@@ -1,0 +1,13 @@
+rofi.modi: window,drun,ssh
+rofi.drun-icon-theme: Pop
+rofi.show-icons: true
+rofi.sidebar-mode: true
+rofi.m: -4
+rofi.kb-mode-next: Alt+Tab
+rofi.terminal: xterm
+#rofi.theme: glue_pro_blue
+#rofi.theme: flat-orange 
+#rofi.theme: sidetab
+#rofi.theme: Pop-Dark
+rofi.theme: .config/rofi/user_themes/flat-orange.rasi
+#rofi.theme: .config/rofi/user_themes/Arc-Dark.rasi

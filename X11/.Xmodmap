@@ -1,0 +1,6 @@
+clear lock
+keycode 66 = Escape
+keycode 133 = Caps_Lock
+clear mod4
+add lock = Super_L
+add mod4 = Super_R Hyper_L
