@@ -35,8 +35,8 @@ PATH=/home/eduardo/Desktop/repositories/lammps-stable/src:$PATH
 export CPL_PATH=/home/eduardo/Desktop/repositories/cpl-library
 source $CPL_PATH/SOURCEME.sh
 
-export PATH=~/Desktop/repositories/packmol:$PATH
-# export PATH=/home/eduardo/.local/bin/:$PATH
+# export PATH=~/Desktop/repositories/packmol:$PATH
+export PATH=/home/eduardo/.mydata/bin:$PATH
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export GEM_HOME=$HOME/.gem
@@ -44,9 +44,8 @@ export GEM_HOME=$HOME/.gem
 # added by Miniconda3 installer
 # export PATH="/home/eduardo/miniconda3/bin:$PATH"
 
-# added by Miniconda2 installer
-export PATH="/home/eduardo/miniconda2/bin:$PATH"
+# added by Miniconda2 installer. Conda autoupdate turned off with
+# conda config --set auto_update_conda False
+# export PATH="/home/eduardo/miniconda2/bin:$PATH"
 
 export PYTHONPATH=/home/eduardo/Desktop/repositories/cplutils_env/cplutils:$PYTHONPATH
-# export PATH=~/Desktop/repositories/parampy:$PATH
-export PYTHONPATH=~/Desktop/repositories/paramate:$PYTHONPATH

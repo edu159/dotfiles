@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'edkolev/tmuxline.vim'
+Plug  'mattn/calendar-vim'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 let g:airline_powerline_fonts = 1
@@ -87,11 +88,12 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 "-------------------------------------------------
 " Omnicompletion functions
+set omnifunc=syntaxcomplete#Complete
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "Fix SpellBad
 highlight SpellBad term=reverse ctermbg=1
 
@@ -100,3 +102,26 @@ let mapleader = ","
 map <leader>n :bn<cr>
 map <leader>b :bp<cr>
 map <leader>d :bd<cr>
+
+" vimwiki/vimwiki
+let g:vimwiki_list = [{'path': '~/.vimwiki/personal.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1},
+                     \{'path': '~/.vimwiki/phd.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1},
+                     \{'path': '~/.vimwiki/archwiki.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1}]
+let g:vimwiki_global_ext = 0
+map <leader>tt <Plug>VimwikiToggleListItem
+" au BufRead,BufNewFile *.md filetype=markdown
+" :autocmd FileType vimwiki map d :VimwikiMakeDiaryNote
+function! ToggleCalendar()
+  execute ":Calendar"
+  if exists("g:calendar_open")
+    if g:calendar_open == 1
+      execute "q"
+      unlet g:calendar_open
+    else
+      g:calendar_open = 1
+    end
+  else
+    let g:calendar_open = 1
+  end
+endfunction
+:autocmd FileType markdown map c :call ToggleCalendar()

@@ -47,11 +47,14 @@ XTerm*faceSize:12
 #define _color6 #3579A8
 #define _color14 #4eb4fa
 
+
+! NOTE: Those colors override Ansi RED and cause trouble
+
 ! Color7: medium grey: setuid file e.g. /usr/bin/sudo
 ! Color15: light grey: background color for setuid files e.g /usr/bin/sudo
-#define _color7 #9999AA
+! #define _color7 #9999AA
 ! Trying white in case it helps
-#define _color15 #ffffff
+! #define _color15 #ffffff
 !#define _color15 #d0d0d0
 
 ! General - covering all X clients
@@ -65,17 +68,17 @@ xterm*background: _background
 xterm*foreground: _foreground
 
 ! Not really required - XTerm defaults to using the foreground colour
-xterm*cursorColor: _foreground
+! xterm*cursorColor: _foreground
 
-xterm*color0: _background
-xterm*color1: _foreground
+! xterm*color0: _background
+! xterm*color1: _foreground
 xterm*color2: _color2
 xterm*color3: _color3
 xterm*color4: _color4
 xterm*color5: _color5
 xterm*color6: _color6
 xterm*color7: _color7
-! 8-15 are considered brighter colours of 1-7
+! ! 8-15 are considered brighter colours of 1-7
 xterm*color8: _color8
 xterm*color9: _color9
 xterm*color10: _color10
