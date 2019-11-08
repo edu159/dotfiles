@@ -105,8 +105,7 @@ map <leader>d :bd<cr>
 
 " vimwiki/vimwiki
 let g:vimwiki_list = [{'path': '~/.vimwiki/personal.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1},
-                     \{'path': '~/.vimwiki/phd.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1},
-                     \{'path': '~/.vimwiki/archwiki.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1}]
+                     \{'path': '~/.vimwiki/arch-linux.wiki', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1}]
 let g:vimwiki_global_ext = 0
 map <leader>tt <Plug>VimwikiToggleListItem
 " au BufRead,BufNewFile *.md filetype=markdown
